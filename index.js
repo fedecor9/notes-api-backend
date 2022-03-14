@@ -8,29 +8,23 @@ app.use(cors())
 let notes = [
   {
     id: 1,
-    content: 'HTML is easy',
+    content: 'Note test 1',
     date: '2019-05-30T17:30:31.098Z',
-    important: true
+    
   },
   {
     id: 2,
-    content: 'Browser can execute only JavaScript',
-    date: '2019-05-30T18:39:34.091Z',
-    important: false
+    content: 'Note test 2',
+    date: '2011-05-30T18:39:34.091Z',
+    
   },
   {
     id: 3,
-    content: 'GET and POST are the most important methods of HTTP protocol',
-    date: '2019-05-30T19:20:14.298Z',
-    important: true
+    content: 'Note test 3',
+    date: '2024-05-30T19:20:14.298Z',
+    
   }
 ]
-
-app.get('/info', (request, response) => {
-    response.send(
-      `<p> There are ${notes.length} notes </p>
-      `)
-  })
 
 app.get('/api/notes', (request, response) => {
   response.json(notes)
