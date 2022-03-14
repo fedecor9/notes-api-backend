@@ -1,5 +1,4 @@
-# API for Notes-app
+# Notes API 
 
-## 
-Made using node.js and express
+API made for notes-app project (https://github.com/fedecor9/notes-app) with node.js and express
 
