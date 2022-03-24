@@ -33,7 +33,7 @@ const createNewNote = (note) => {
   return {
     id: uniqid(),
     tittle: note.tittle,
-    text: note.content,
+    text: note.text,
     date: new Date().toDateString(),
     color: note.color,
   };
@@ -67,8 +67,8 @@ app.post("/api/notes", (request, response) => {
 
 //deletes note with especific id
 app.delete("/api/notes/:id", (request, response) => {
-  const id = Number(request.params.id);
-  notes = notes = notes.filter((elems) => elems.id !== id);
+  const id = request.params.id;
+  notes = notes.filter((elems) => elems.id !== id);
   response.status(204);
   return response.json(notes);
 });
