@@ -55,7 +55,7 @@ app.get("/api/notes/:id", (request, response) => {
 //adds note
 app.post("/api/notes", (request, response) => {
   const note = request.body;
-  if (!note || !note.text) {
+  if (!note || !note.text || !note.tittle) {
     return response.status(400).json({
       error: "content missing",
     });
