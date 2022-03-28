@@ -46,7 +46,7 @@ app.get("/api/notes", (request, response) => {
 
 //sends note with especific id
 app.get("/api/notes/:id", (request, response) => {
-  const id = Number(request.params.id);
+  const id = request.params.id;
   const note = notes.find((elem) => elem.id === id);
   if (!note) response.status(404).end();
   return response.json(note);
